@@ -1,0 +1,172 @@
+/*
+
+Template: Avalin
+Author: MrWP
+Website: http://zmedia.ir
+ 
+*/
+
+@media only screen and (max-width: 1170px){
+
+.contact-form{
+	left:0;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	transform: translateX(0);
+}
+
+}
+
+@media only screen and (max-width: 1024px){
+
+.main ul li{
+	width:90%;
+	font-size:70px;
+	margin:0 auto;
+}
+
+.home-p{
+	font-size:17px;
+	font-weight:300;
+	width:90%;
+}
+
+.button-ready{
+	width:auto;
+	max-width:140px;
+	padding:8px 15px;
+	font-size:100%;
+}
+
+#home .slides-navigation a{
+	display:none;
+}
+
+.packages .package{
+	width:22.7%;
+}
+
+.portfolio-img .zoom{
+	left:30%;
+}
+
+.portfolio-img .detail{
+	right:30%;
+}
+
+}
+
+@media only screen and (max-width: 930px){
+
+.navigation .logo{
+	left:20px;
+}
+
+.nav-menu{
+	display:none;
+}
+
+.mobile-drop{
+	display:block;
+}
+
+}
+
+@media only screen and (max-width: 800px){
+
+.work{
+	width:33%;
+}
+
+.packages .package{
+	width:50%;
+	margin:15px auto;
+}
+
+.packages .first,
+.packages .last{
+	margin:15px auto !important;
+}	
+	
+}
+
+@media only screen and (max-width: 640px){
+
+#navigation{
+	height:60px;
+}
+
+.navigation .logo a{
+	width:auto;
+	display:block;
+	margin:16px 0 0;
+}
+
+.navigation .logo a img{
+	height:30px;
+}
+
+.main ul li{
+	font-size:40px;
+}
+
+.work{
+	width:49.4%;
+}
+
+.header,
+.description{
+	width:95%;
+}
+
+}
+
+@media only screen and (max-width: 480px){
+
+.header{
+	font-size:30px;
+}
+
+.description{
+	font-size:18px;
+}
+
+.filters{
+	font-size:15px;
+}
+
+.filters li a,
+.filters li:last-child a,
+.filters li:first-child a{
+	display:block;
+	border-radius:6px;
+	padding:8px 15px;
+	margin:5px auto;
+	font-size:14px;
+}
+
+.work{
+	width:99%;
+	margin:10px auto;
+	float:none;
+}
+
+.portfolio-img .zoom{
+	left:35%;
+}
+
+.portfolio-img .detail{
+	right:35%;
+}
+
+.packages .package{
+	width:95%;
+	float:none;
+}
+
+.contact-form{
+	width:100%;
+}
+
+
+}

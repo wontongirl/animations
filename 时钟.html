@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+	<title>Document</title>
+  <script src="./js/jquery-3.1.0.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <style>
+    .container{
+      background: pink;
+      /* height: 100px; */
+    }
+    .container-fluid{
+      background: green;
+      height: 100px
+    }
+    .row{
+      /* height:100px; */
+    }
+    .row div{
+      border: 1px solid #999;
+      height:100px;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-xs-4"></div>
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4"></div> -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">1</div>
+    </div> 
+  </div> 
+  <div class="box visible-lg hidden-xs"></div>
+  <div class="container-fluid"></div>
+  <button class="btn btn-primary btn-lg btn-default btn-block"></button>
+</body>
+</html>

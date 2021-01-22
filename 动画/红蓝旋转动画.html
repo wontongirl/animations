@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    @-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes top {
+    from {top:0;}
+    to {top:-60%;}
+}
+@-webkit-keyframes bottom {
+    from {bottom:0;}
+    to {bottom:-60%;}
+}
+
+body {
+    background: #333;
+    overflow: hidden;
+}
+
+#container {
+    position: absolute;
+    left:50%; top:50%;
+    width: 120px;
+    height: 120px;
+    margin: -50px 0 0 -50px;
+    -webkit-animation: rotate linear 3.2s infinite;
+}
+
+.sphere {
+    position: absolute;
+}
+.sphere:before,
+.sphere:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: tomato;
+}
+.sphere:before {
+    top: 0;
+    border-radius: 999px 999px 0 0;
+    -webkit-animation: top ease .8s alternate infinite;
+}
+.sphere:after {
+    bottom: 0;
+    border-radius: 0 0 999px 999px;
+    -webkit-animation: bottom ease .8s alternate infinite;
+    background: skyblue;
+}
+
+.s-1 { top:0; right:0; bottom:0; left:0; }
+.s-2 { top:10px; right:10px; bottom:10px; left:10px; }
+.s-3 { top:20px; right:20px; bottom:20px; left:20px; }
+.s-4 { top:30px; right:30px; bottom:30px; left:30px; }
+.s-5 { top:40px; right:40px; bottom:40px; left:40px; }
+.s-gold { top:50px; right:50px; bottom:50px; left:50px; }
+
+.s-2:before,
+.s-2:after {
+    background: antiquewhite;
+    -webkit-animation-delay: 50ms;
+}
+.s-3:before,
+.s-3:after {
+    -webkit-animation-delay: 100ms;
+}
+.s-4:before,
+.s-4:after {
+    background: antiquewhite;
+    -webkit-animation-delay: 150ms;
+}
+.s-5:before,
+.s-5:after {
+    -webkit-animation-delay: 200ms;
+}
+.s-gold:before,
+.s-gold:after {
+    background: gold;
+    box-shadow: 0 0 50px gold;
+    -webkit-animation: none;
+}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="sphere s-gold"></div>
+    <div class="sphere s-5"></div>
+    <div class="sphere s-4"></div>
+    <div class="sphere s-3"></div>
+    <div class="sphere s-2"></div>
+    <div class="sphere s-1"></div>
+</div>
+</body>
+</html>

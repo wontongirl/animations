@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>漂亮的动态气泡背景js插件bubbly-bg.js</title>
+	
+	<link rel="stylesheet" type="text/css" href="normalize.css" />
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<body>
+
+	<div class="overlay">
+		<h3>点击下面的图片来查看不同的气泡背景效果</h3>
+		<div class="examples">
+			<div class="example"><img data-config-nr="0" src="config0.png"></div>
+			<div class="example"><img data-config-nr="1" src="config1.png"></div>
+			<div class="example"><img data-config-nr="2" src="config2.png"></div>
+			<div class="example"><img data-config-nr="3" src="config3.png"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="bubbly-bg.js"></script>
+	<script type="text/javascript">
+	bubbly();
+	let configs = [
+		{},
+		{
+			colorStart: "#111",
+			colorStop: "#422",
+			bubbleFunc: () => `hsla(0, 100%, 50%, ${Math.random() * 0.25})`
+		},
+		{
+			colorStart: "#4c004c",
+			colorStop: "#1a001a",
+			bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`
+		},
+		{
+			colorStart: "#fff4e6",
+			colorStop: "#ffe9e4",
+			blur: 1,
+			compose: "source-over",
+			bubbleFunc: () => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
+		}
+	];
+	document.addEventListener("click", function (e) {
+		if (e.target.hasAttribute("data-config-nr")) {
+			document.body.removeChild(document.querySelector("canvas"));
+			bubbly(configs[e.target.getAttribute("data-config-nr")]);
+		}
+	});
+	</script>
+	
+</body>
+</html>

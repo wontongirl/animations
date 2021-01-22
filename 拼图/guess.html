@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	$(function(){
+		if $(".user_stone").click(funciton(){
+			$(".computer").css({
+				('background','images/');
+			});
+		})
+	})
+	</script>
+	<style>
+		body{
+			margin:0;
+			padding:0;
+			cursor:url(images/curser.png),auto;
+		}
+		a:hover{
+			cursor:url(images/cursor_hover.png),auto;
+		}
+		.main{
+			width:100%;
+			height:500px;
+		}
+		.computer{
+			width:129px;
+			height:173px;
+		}
+		.user_stone,.user_scissors,.user_cloth{
+			display: block;
+			width:129px;
+			height:173px;
+			float:left;
+			margin:10px;
+		}
+		.user_stone{
+			background: url(images/stone.jpg) no-repeat;
+		}
+		.user_scissors{
+			background: url(images/Scissors.jpg) no-repeat;
+		}
+		.user_cloth{
+			background: url(images/cloth.jpg) no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="computer">
+			<div class="user_stone"></div>
+			<div class="user_scissors"></div>
+			<div class="user_cloth"></div>
+		</div>
+		<div class="user">
+			<a href="javascript:;" class="user_stone"></a>
+			<a href="javascript:;" class="user_scissors"></a>
+			<a href="javascript:;" class="user_cloth"></a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+var index = 0;
+var str = document.getElementById("string").innerHTML;
+function type() {
+if(index == str.length) {
+index = 0;
+}
+document.getElementById("showStr").innerText = str.substring(0, index++);
+}
+setInterval(type, 200); //通过定时器来让文字逐步显示
+
+
+
+
+
+<textarea id="showStr"></textarea> //用来显示逐渐出现的文字
+<div style="display:none" id="string">宝贝，我好想好想你，想你想的睡不好觉，想你想的吃不下饭，我爱你爱你爱你，么么么么么么么么，啵啵啵啵啵啵啵
+</div>

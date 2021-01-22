@@ -1,0 +1,30 @@
+.balls{
+	position:absolute;
+	width:1095px;height:647px;
+	top:100px;left:-40px;
+	animation:balls 6s infinite;
+}
+@-webkit-keyframes balls{
+	0%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+	30%{transform:translateX(14px) translateY(14px);rotate(4deg)}
+	60%{transform:translateX(-20px) translateY(26px) rotate(-4deg);}
+	100%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+}
+@-ms-keyframes balls{
+	0%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+	30%{transform:translateX(14px) translateY(14px);rotate(4deg)}
+	60%{transform:translateX(-20px) translateY(26px) rotate(-4deg);}
+	100%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+}
+@-o-keyframes balls{
+	0%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+	30%{transform:translateX(14px) translateY(14px);rotate(4deg)}
+	60%{transform:translateX(-20px) translateY(26px) rotate(-4deg);}
+	100%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+}
+@-moz-keyframes balls{
+	0%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+	30%{transform:translateX(14px) translateY(14px);rotate(4deg)}
+	60%{transform:translateX(-20px) translateY(26px) rotate(-4deg);}
+	100%{transform:translateX(0px) translateY(0px) rotate(0deg);}
+}

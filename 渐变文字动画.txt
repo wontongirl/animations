@@ -1,0 +1,15 @@
+@-webkit-keyframes slideShine {
+     0% {
+          background-position: 0 0;
+        }
+     100% {
+          background-position: 100% 100%;
+      }
+ }
+@keyframes slideShine {
+      0% {background-position: 0 0; }
+     100% {background-position: 100% 100%; }
+}
+
+background:#02c99c -webkit-linear-gradient(left,#02c99c,#a1eba3 50%,#c1ecc3 90%,#02c99c) no-repeat 0 0;background-size:20% 100%;-webkit-background-clip: text;-webkit-text-fill-color: transparent;-webkit-animation: slideShine 4s linear infinite;animation: slideShine 4s linear infinite;
+}

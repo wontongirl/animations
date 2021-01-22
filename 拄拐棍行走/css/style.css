@@ -1,0 +1,22 @@
+html {
+  overflow: hidden;
+}
+
+svg {
+  height: 90vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+
+.sign {
+  top: 25px;
+  right: 25px;
+  width: 100vw;
+  text-align: center;
+  margin: 0 auto;
+  height: auto;
+  position: absolute;
+  font-size: 1.5em;
+  font-family: 'La Belle Aurore', cursive;
+}

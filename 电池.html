@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.mm {
+                width: 100px;
+                margin: 0 auto;
+            }
+             
+            .cc {
+                position: relative;
+                width: 100px;
+                height: 300px;
+                border: 2px solid #ccc;
+                margin: auto;
+                margin-top: 50px;
+            }
+             
+            .top {
+                position: absolute;
+                top: -14px;
+                left: 50%;
+                width: 26px;
+                height: 10px;
+                margin-left: -15px;
+                border: 2px solid #ccc;
+            }
+             
+            .filler {
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 50%;
+            }
+            .animation{
+                animation: first 8s linear infinite;
+            }
+            @keyframes first{
+                0% {
+                    height:0px;
+                    /*background:#ff5722;
+                    background:rgba(255,87,34,1);*/
+                    background:linear-gradient(to right,
+                        rgba(255,87,34,1) 0%,
+                        rgba(255,255,255,1) 70%,
+                        rgba(255,87,34,1) 100%);
+                }
+                 
+                30% {
+                    /*background:#ff9800;
+                    background:rgba(255,152,0,1);*/
+                    background:linear-gradient(to right,
+                        rgba(255,152,0,1) 0%,
+                        rgba(255,255,255,1) 70%,
+                        rgba(255,152,0,1) 100%);
+                }
+                 
+                100% {
+                    height:100%;
+                    /*background:#64fa32;
+                    background:rgba(100,250,50,1);*/
+                    background:linear-gradient(to right,
+                        rgba(100,250,50,1) 0%,
+                        rgba(255,255,255,1) 70%,
+                        rgba(100,250,50,1) 100%);
+                }
+            }
+        }
+	</style>
+</head>
+<body>
+	<div class="mm">
+    <div class="cc">
+            <div class="top"></div>
+        <div class="filler animation"></div>
+    </div>
+</div>
+</body>
+</html>

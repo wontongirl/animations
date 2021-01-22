@@ -1,0 +1,15 @@
+$('body').firemaks({
+        color: 'random',
+        type: 'random',
+        color_child: 'inherit',
+        type_child: 'random',
+        boom_count: 3,
+    })
+
+    $(document).mousemove(function (e) {
+        cx = e.pageX
+        cy = e.pageY
+    })
+    $('body').on('click', function () {
+        $('body').firemaks('fire', cx, cy, 40, color1, 2, 1.5)
+    })

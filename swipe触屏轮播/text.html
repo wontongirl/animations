@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>手机焦点滑动轮播图</title>
+    <meta content="width=device-width,minimum-scale=1,maximum-scale=1,shrink-to-fit=no,
+    user-scalable=no,minimal-ui" name="viewport">
+</head>
+<style type="text/css">
+    *{
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+    /* Swipe 2 required styles */
+ 
+    #lunbotu {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+    }
+    .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+    }
+    .swipe-wrap > div {
+        float:left;
+        width:100%;
+        position: relative;
+    }
+    /* END required styles */
+    .swipe-wrap img{
+        width: 30%;
+    }
+    .yuandian {
+        right:10px;
+        bottom:5px;
+        position: absolute;
+        /*height: 40px;*/
+    }
+    .yuandian li{
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: floralwhite;
+        float: left;
+        margin-right: 10px;
+ 
+    }
+    .yuandian .cur{
+        background:red;
+    }
+ 
+</style>
+<body>
+<div id="lunbotu" style="background:pink;">
+    <div class="swipe-wrap">    <!--此处class的名称是固定的-->
+        <div><img src="images/s3_li.png" alt="" / style="padding-left:8px;padding-right:10px;"><img src="images/s3_li.png" alt="" / style="padding-right:10px;"><img src="2.jpg" alt="" /></div>
+        <div><img src="images/s3_li.png" alt="" / style="padding-left:8px;padding-right:10px;"><img src="images/s3_li.png" alt="" / style="padding-right:10px;"><img src="2.jpg" alt="" /></div>
+        <div><img src="images/s3_li.png" alt="" / style="padding-left:8px;padding-right:10px;"><img src="images/s3_li.png" alt="" / style="padding-right:10px;"><img src="2.jpg" alt="" /></div>
+        <div><img src="images/s3_li.png" alt="" / style="padding-left:8px;padding-right:10px;"><img src="images/s3_li.png" alt="" / style="padding-right:10px;"><img src="2.jpg" alt="" /></div>
+        <div><img src="images/s3_li.png" alt="" / style="padding-left:8px;padding-right:10px;"><img src="images/s3_li.png" alt="" / style="padding-right:10px;"><img src="2.jpg" alt="" /></div>
+        <div><img src="images/s3_li.png" alt="" / style="padding-left:8px;padding-right:10px;"><img src="images/s3_li.png" alt="" / style="padding-right:10px;"><img src="2.jpg" alt="" /></div>
+    </div>
+    <ul class="yuandian">
+        <li class="cur"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+ 
+ 
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src='js/swipe.js'></script>
+<script>
+ 
+    // pure JS
+    var elem = document.getElementById('lunbotu');
+    window.mySwipe = Swipe(elem, {
+        // startSlide: 4,
+         auto: 3000,        //每隔3000ms，自动轮播一次
+        // continuous: true,
+        // disableScroll: true,
+        // stopPropagation: true,
+ 
+//        回调函数表示没做完一个轮播，就执行下面的内容
+         callback: function(index, element) {
+//             console.log(index);           //在控制台输出index的值
+ 
+//             让自己的li添加cur类，其他的兄弟li移除cur类，也就是一种排他
+             $(".yuandian li").eq(index).addClass("cur").siblings().removeClass("cur");
+ 
+         }
+        // transitionEnd: function(index, element) {}
+    });
+ 
+//    点击小圆点，图片会有一个slide的效果
+    $('.yuandian li').click(function(){
+        mySwipe.slide($(this).index());
+    });
+ 
+    // with jQuery
+    // window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+ 
+</script>
+</body>
+</html>

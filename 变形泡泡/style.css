@@ -1,0 +1,65 @@
+:root {
+  --backgroundColor: #3f88fb;
+  --firstColor: #0645a8;
+  --secondColor: #0e52bf;
+  --thirdColor: #236adc;
+  --fourthColor: #7ba9f2;
+  --dropShadowColor: rgba(0, 0, 0, .7);
+}
+
+html,
+body {
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+}
+
+main {
+  display: grid;
+  width: 100vw;
+  border: none;
+  outline: none;
+  height: 100vh;
+}
+
+.blob {
+  margin: auto;
+  border: none;
+  outline: none;
+}
+
+svg {
+  position: absolute;
+  border: none;
+  outline: none;
+  top: 0;
+  left: 0;
+  transform-origin: 50% 50%;
+  animation: move 60s ease-in-out infinite;
+}
+svg:nth-of-type(2){
+  animation: move2 60s ease-in-out infinite;
+}
+svg:nth-of-type(3){
+  animation: move3 60s ease-in-out infinite;
+}
+@keyframes move {
+  0%   { transform: scale(1) translate(0, 0) rotate(0); fill: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+  25%  { transform: scale(1) translate(0, 0) rotate(0); fill: var(--secondColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  50%  { transform: scale(1) translate(0, 0) rotate(0); fill: var(--thirdColor); filter: drop-shadow( -16px -16px 16px var(--dropShadowColor)); }
+  75%  { transform: scale(1) translate(0, 0) rotate(0); fill: var(--fourthColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  100% { transform: scale(1) translate(0, 0) rotate(0); fill: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+}
+@keyframes move2 {
+  0%   { transform: scale(0.9) translate(0, 0) rotate(0); fill: var(--secondColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+  25%  { transform: scale(0.9) translate(0, 0) rotate(0); fill: var(--thirdColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  50%  { transform: scale(0.9) translate(0, 0) rotate(0); fill: var(--fourthColor); filter: drop-shadow( -16px -16px 16px var(--dropShadowColor)); }
+  75%  { transform: scale(0.9) translate(0, 0) rotate(0); fill: var(--firstColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  100% { transform: scale(0.9) translate(0, 0) rotate(0); fill: var(--secondColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+}
+@keyframes move3 {
+  0%   { transform: scale(0.8) translate(0, 0) rotate(0); fill: var(--thirdColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+  25%  { transform: scale(0.8) translate(0, 0) rotate(0); fill: var(--fourthColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  50%  { transform: scale(0.8) translate(0, 0) rotate(0); fill: var(--firstColor); filter: drop-shadow( -16px -16px 16px var(--dropShadowColor)); }
+  75%  { transform: scale(0.8) translate(0, 0) rotate(0); fill: var(--secondColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  100% { transform: scale(0.8) translate(0, 0) rotate(0); fill: var(--thirdColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+}

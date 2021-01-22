@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="work/Template/pc/js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<script>
+		
+		$.ajax({
+			url: '/path/to/file',
+			type: 'default GET (Other values: POST)',
+			dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+			data: {param1: 'value1'},
+			// 避免短时间内多次提交，产生脏数据
+			beforeSend:()=>{
+				$("#sub").attr({disabled:'disabled'});
+			}
+			// 获取ajax执行进度
+			xhr:function(){
+				var xhr = new window.XMLHttpRequest();
+				xhr.addEventListener('progress',(e) => {
+				  console.log(e);
+				  if(e.lengthComputable){
+				  	var percent = e.loaded /e.total;
+				  console.log(Math.round(percent * 100) +'%');
+				}
+				},false);
+				return xhr
+			},
+			success:(data)=>{
+
+			}
+
+		})
+		
+	</script>
+</body>
+</html>

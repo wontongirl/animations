@@ -1,0 +1,48 @@
+/*
+* @Author: admin
+* @Date:   2018-05-21 22:52:19
+* @Last Modified by:   admin
+* @Last Modified time: 2018-05-21 23:05:57
+*/
+.main{
+	width:1000px;
+	margin:0 auto;
+}
+*{
+	margin:0;
+	padding:0;
+	font-family: "microsoft yahei";
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+.clearfix:before,.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+
+    clear: both;
+}
+.clearfix{
+    zoom:1;
+}
+.lf{
+    float: left;
+}
+.rf{
+    float: right;
+}
+h1,h2,h3,h4,h5,h6{
+
+    font-size: 100%;
+    font-weight: normal;
+}
+input{
+    border: 0; 
+    outline: none;
+}

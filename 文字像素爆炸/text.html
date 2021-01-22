@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #wrap{width:100px;height:100px;
+        border:10px dotted #000;padding:100px;
+perspective:800px;perspective-origin:center center;
+margin:30px auto;}
+
+
+#box{
+    width:100px;height:100px;
+     position:relative;
+    transform-style:preserve-3d;
+    animation:play 30s infinite;
+    transform-origin:center center -50px;}
+
+
+#box div{
+    width:100px;height:100px;
+    text-align:center;
+    line-height:100px;
+    position:absolute;
+    color:#fff;
+    z-index:1;
+    font-size:30px;
+    backface-visibility:hidden;
+    }
+
+
+#box div:nth-of-type(1)
+{
+    left:0px;
+    top:-100px;
+    background:yellow;
+    transform-origin:bottom;
+    transform:rotateX(90deg);
+}
+#box div:nth-of-type(2)
+{
+    right:100px;
+    top:0px;
+    background:blue;
+    transform-origin:right;
+    transform:rotateY(-90deg);
+}
+#box div:nth-of-type(3)
+{
+    left:0px;
+    top:0px;
+    background:red;
+    z-index:2;
+}
+#box div:nth-of-type(4)
+{
+    left:100px;
+    top:0px;
+    background:green;
+    transform-origin:left;
+    transform:rotateY(90deg);
+}
+#box div:nth-of-type(5)
+{
+    left:0px;
+    top:100px;
+    background:purple;
+    transform-origin:top;
+    transform:rotateX(-90deg);
+}
+#box div:nth-of-type(6)
+{
+    left:0px;
+    top:0px;
+    background:pink;
+    transform:translateZ(-100px) rotateY(180deg);
+}
+
+构建玩正方体后，用以下属性可以在谷歌浏览器（有些浏览器不兼容）实现旋转效果
+
+@keyframes play{
+from{transform:rotateZ(0deg) rotateY(0deg);}
+to{transform:rotateZ(360deg) rotateY(360deg);}
+}
+
+
+    </style>
+</head>
+<body>
+    <body>
+    <div id="wrap">
+<div id="box">
+   <div><img src="images/1.jpg"/></div>
+   <div><img src="images/2.jpg"/></div>
+   <div><img src="images/3.jpg"/></div>
+   <div><img src="images/4.jpg"/></div>
+   <div><img src="images/5.jpg"/></div>
+   <div><img src="images/6.jpg"/></div>
+</div>
+    </div>
+</body>
+</body>
+</html>

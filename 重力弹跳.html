@@ -1,0 +1,122 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+#div1
+{
+	width:100px;
+	height:100px;
+	background-color:#F00;
+	position:absolute;
+	left:0;
+	top:0;
+}
+#but1
+{
+	position:absolute;
+	top:100px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+window.onload=function()
+{
+	var oDiv=document.getElementById("div1");
+	lastX=l=document.documentElement.clientWidth/2-oDiv.offsetWidth;
+	lastY=document.documentElement.clientHeight/2-oDiv.offsetHeight;             
+	oDiv.style.left=lastX+'px';
+	oDiv.style.top=lastY+'px';	                             //让初始值在页面中间
+	
+	//为盒子鼠标加事件
+	oDiv.onmousedown=function(ev)       //鼠标按下事件                
+	{
+		clearInterval(timer);
+			var oEvent=ev||event;
+			var disX=oEvent.clientX-oDiv.offsetLeft;
+			var disY=oEvent.clientY-oDiv.offsetTop;
+			document.onmousemove=function(ev)    //鼠标移动事件
+			{
+				var oEvent=ev||event;
+				var l=oEvent.clientX-disX;
+				var t=oEvent.clientY-disY;
+				oDiv.style.left=l+'px';
+				oDiv.style.top=t+'px';	
+				iSpeedX=l-lastX;
+				iSpeedY=t-lastY;
+				lastX=l;
+				lastY=t;
+			}; 
+			document.onmouseup=function()           //鼠标抬起事件
+			{
+				document.onmousemove=null;
+				document.onmouseup=null;
+				starMove();
+				
+			};
+	};	
+};
+//重力运动事件
+var iSpeedX=12;
+var iSpeedY=0;
+var timer=null;
+	function starMove()
+	{
+		clearInterval(timer);
+		var oDiv=document.getElementById("div1");
+		timer=setInterval(function(){
+			var l=oDiv.offsetLeft+iSpeedX;
+			var t=oDiv.offsetTop+iSpeedY;		
+			if(t>(document.documentElement.clientHeight-oDiv.offsetHeight))
+			{
+				t=document.documentElement.clientHeight-oDiv.offsetHeight;               //保证不走出页面
+				iSpeedY*=-0.8;
+				iSpeedX*=0.8;                                                             //碰撞后改变方向并有碰撞损失
+			}
+			if(l>(document.documentElement.clientWidth-oDiv.offsetWidth))
+			{
+				l=document.documentElement.clientWidth-oDiv.offsetWidth;
+				iSpeedX*=-0.8;
+			}
+			if(t<0)
+			{
+				t=0;
+				iSpeedY*=-0.8;
+				iSpeedX*=0.8;
+			}
+			if(l<0)
+			{
+				l=0;
+				iSpeedX*=-0.8;
+			}
+			else
+			{
+				iSpeedY+=3;
+			}
+			if(Math.abs(iSpeedX)<0.5)
+			{
+				iSpeedX=0;
+			}
+			if(Math.abs(iSpeedY)<0.5)
+			{
+				iSpeedY=0;
+			}
+			if(iSpeedX==0&&iSpeedY==0&&t==(document.documentElement.clientHeight-oDiv.offsetHeight))   //停止条件（x和y方向速度 都为0，并且到达页面框的最下边）
+			{
+				clearInterval(timer);
+			}
+			else
+			{
+				oDiv.style.left=l+'px';
+				oDiv.style.top=t+'px';	
+			}
+		},30);
+	}
+</script>
+</head>
+ 
+<body>
+<div id="div1"></div>
+</body>
+</html>

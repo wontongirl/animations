@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keyswords" content=""> 
+	<meta name="description" content=""> 
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<!-- <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1dced8126bf8ff4536291d849995bfdc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+</script>
+<script language="javascript" src="http://www.offcn.com/statics/js/bdtop.js"></script> -->
+<style>
+    body{
+        background:pink;
+    }
+    .snow-canvas{display: block;width: 100%;height: 100%;top: 0;left: 0;position: fixed;pointer-events: none;}
+</style>
+</head>
+<body>
+<!-- nav -->
+<div class="nav">
+    <div class="nav_center main">
+        <a href="#" target="_blank" class="logo lf">中公农信社</a>
+        <ul class="lf">
+            <li class="lf"><a href="#" target="_blank">首页</a></li>
+            <li class="lf"><a href="#" target="_blank">课程咨询</a></li>
+            <li class="lf"><a href="#" target="_blank">报名指导</a></li>
+            <li class="lf"><a href="#" target="_blank">资料领取</a></li>
+        </ul>
+        <div class="rf tel">客服中心：400-6300-999</div>
+    </div>
+</div>
+<canvas class="snow-canvas" speed="1" interaction="false" size="2" count="80" opacity="0.00001" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" wind-power="0" image="false"></canvas>
+<canvas class="snow-canvas" speed="2" interaction="true" size="6" count="30" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false"></canvas>
+<canvas class="snow-canvas" speed="3" interaction="true" size="12" count="20" wind-power="-5" image="snow.png"></canvas>  
+ <script>
+    $(function(){
+      $(".snow-canvas").snow();
+    });
+  </script>
+
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script language="javascript" src="http://www.offcn.com/statics/js/bdbot.js"></script>
+<script type="text/javascript">
+    new WOW().init();
+</script>
+<script type="text/javascript">
+    var DEFAULT_VERSION = "8.0";
+    var ua = navigator.userAgent.toLowerCase();
+    var isIE = ua.indexOf("msie")>-1;
+    var safariVersion;
+    if(isIE){
+        safariVersion =  ua.match(/msie ([\d.]+)/)[1];
+    }
+    if(safariVersion <= DEFAULT_VERSION ){
+        alert("当前版本IE"+safariVersion+"请更新浏览器版本(IE 8.0以上)\r\n或者下载其他浏览器");
+        window.location.href="down.html";
+    }
+</script>
+</body>
+</html>

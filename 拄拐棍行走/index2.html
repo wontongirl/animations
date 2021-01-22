@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 SVG实现老爷爷拄拐杖行走动画DEMO演示</title>
+  <link rel="stylesheet" href="css/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <svg viewBox="0 -20 459 717" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <ellipse id="path-1" cx="300.5" cy="668" rx="185.5" ry="33"/>
+    <filter x="-6.1%" y="-34.1%" width="112.1%" height="168.2%" filterUnits="objectBoundingBox" id="filter-2">
+      <feMorphology radius="3.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+      <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0657269022 0" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
+  <g id="Page-1" fill="none" fill-rule="evenodd">
+    <g id="oldMan">
+      <use filter="url(#filter-2)" xlink:href="#path-1" id="shadow" transform="rotate(-1 279.5 3074.362)" fill="#000"/>
+      <g id="arm_r" class="bodyMovement">
+        <g id="arm_r_bottom" transform="rotate(-13 1420.67 213.536)">
+          <rect id="Rectangle" fill="#D4BB87" transform="rotate(28 84.126 103.373)" x="39.261" y="11.223" width="89.731" height="184.301" rx="44.866"/>
+          <rect id="Rectangle" fill="#A9A9A9" transform="rotate(26 53.07 82.248)" x="41.599" y="79.617" width="22.942" height="5.261" rx="2.63"/>
+          <rect id="Rectangle" fill="#A9A9A9" transform="rotate(26 47.278 91.912)" x="35.799" y="89.281" width="22.959" height="5.261" rx="2.63"/>
+          <rect id="Rectangle" fill="#A9A9A9" transform="rotate(26 41.488 101.577)" x="29.999" y="98.946" width="22.979" height="5.261" rx="2.63"/>
+          <rect id="Rectangle" fill="#A9A9A9" transform="rotate(26 35.662 111.4)" x="24.162" y="108.77" width="23" height="5.261" rx="2.63"/>
+          <g id="arm_r_hand" transform="translate(0 108)">
+            <rect id="Rectangle" fill="#D4BB87" transform="rotate(2 57.69 54.37)" x="12.824" y="2.07" width="89.731" height="104.598" rx="44.866"/>
+            <g id="baston" transform="translate(7 57)">
+              <rect id="Rectangle" fill="#6A5A51" x="33.628" y="6.051" width="20" height="178.949" rx="10"/>
+              <path d="M53.602 175.916c-.3 5.252-4.655 9.42-9.983 9.42-5.33 0-9.684-4.168-9.985-9.42h19.967z" id="Combined-Shape" fill="#464646"/>
+              <rect id="Rectangle" fill="#6A5A51" x=".5" y=".627" width="84.5" height="25.141" rx="12.57"/>
+            </g>
+            <rect id="Rectangle" fill="#D4BB87" transform="rotate(18 16.943 50.98)" x="5.717" y="32.348" width="22.453" height="37.264" rx="11.227"/>
+          </g>
+        </g>
+        <g id="arm_r_top" transform="rotate(-13 808.507 29.894)">
+          <rect id="Rectangle" fill="#D4BB87" x="6.449" y="1.63" width="89.731" height="234.112" rx="44.866"/>
+          <path d="M96.11 89.673V46.65C96.11 21.015 75.33.236 49.696.236 24.064.237 3.284 21.017 3.284 46.65v43.023H96.11z" id="Combined-Shape" fill="#334581"/>
+          <rect id="Rectangle" fill="#BEB2AB" x=".26" y="85.806" width="102.108" height="13.152" rx="6.576"/>
+        </g>
+      </g>
+      <g id="leg_r">
+        <g id="leg_r_bottom" transform="translate(108 546)">
+          <rect id="Rectangle" fill="#D4BB87" x="53.966" y=".145" width="84.069" height="122.349" rx="42.034"/>
+          <g id="foot_r" transform="translate(0 68)">
+            <path d="M75.7 4.4L112.953.303c10.03-1.103 19.61 4.46 23.62 13.72l5.5 12.7c4.442 10.255-.27 22.17-10.525 26.61-2.54 1.1-5.276 1.667-8.042 1.667H78.214c-12.702 0-23-10.297-23-23v-4.738c0-11.73 8.827-21.58 20.486-22.862z" id="Path" fill="#D4BB87"/>
+            <path d="M2 55C2 25.177 27.296 1 58.5 1S115 25.177 115 55H2z" id="Combined-Shape" fill="#8F8F8F"/>
+            <path d="M4.5 47h140c2.485 0 4.5 2.015 4.5 4.5v3.2c0 2.407-1.892 4.387-4.295 4.496C87.577 61.8 51.247 63.1 35.715 63.1c-13.81 0-24.6-1.028-32.367-3.085C1.374 59.492 0 57.705 0 55.665V51.5C0 49.015 2.015 47 4.5 47z" id="Rectangle-6" fill="#8F8F8F"/>
+            <rect id="Rectangle" fill="#D4BB87" x="118" y="5" width="20" height="20" rx="10"/>
+            <path d="M133.494 7.812c2.467 1.68 3.82 3.838 4.087 6.503.268 2.644-1.133 5.546-4.25 8.703-.194.196-.192.513.004.707.197.194.513.192.707-.005 3.31-3.35 4.837-6.517 4.536-9.505-.3-2.968-1.815-5.387-4.52-7.23-.227-.155-.538-.096-.693.132-.156.23-.097.54.13.695z" id="Line" fill="#D9C397" fill-rule="nonzero"/>
+          </g>
+        </g>
+        <g id="leg_r_top" transform="translate(151 370)">
+          <rect id="Rectangle" fill="#D4BB87" x="10.966" y="128.651" width="84.069" height="101.037" rx="42.034"/>
+          <rect id="Rectangle" fill="#464646" width="106" height="219.633" rx="11"/>
+        </g>
+      </g>
+      <g id="leg_l">
+        <g id="leg_l_bottom" transform="translate(269 550)">
+          <rect id="Rectangle-" fill="#F4D79D" x="53.966" y=".145" width="84.069" height="122.349" rx="42.034"/>
+          <g id="foot_l" transform="translate(0 68)">
+            <path d="M75.7 4.4L112.953.303c10.03-1.103 19.61 4.46 23.62 13.72l5.5 12.7c4.442 10.255-.27 22.17-10.525 26.61-2.54 1.1-5.276 1.667-8.042 1.667H78.214c-12.702 0-23-10.297-23-23v-4.738c0-11.73 8.827-21.58 20.486-22.862z" id="Path" fill="#F4D79D"/>
+            <path d="M2 55C2 25.177 27.296 1 58.5 1S115 25.177 115 55H2z" id="Combined-Shape" fill="#B4B4B4"/>
+            <path d="M4.5 49h142c2.485 0 4.5 2.015 4.5 4.5v3.31c0 2.36-1.825 4.32-4.18 4.49-58.028 4.133-94.9 6.2-110.622 6.2-14.38 0-25.546-1.73-33.494-5.19C1.062 61.596 0 59.975 0 58.184V53.5C0 51.015 2.015 49 4.5 49z" id="Rectangle-6" fill="#B4B4B4"/>
+            <rect id="Rectangle" fill="#F4D79D" x="118" y="5" width="20" height="20" rx="10"/>
+            <path d="M133.494 7.81c2.467 1.68 3.82 3.84 4.087 6.503.268 2.645-1.133 5.546-4.25 8.703-.194.197-.192.513.004.708.197.194.513.192.707-.005 3.31-3.35 4.837-6.518 4.536-9.507-.3-2.967-1.815-5.387-4.52-7.23-.227-.154-.538-.095-.693.133-.156.228-.097.54.13.695z" id="Line" fill="#FFE6B4" fill-rule="nonzero"/>
+          </g>
+        </g>
+        <g id="leg_l_top" transform="translate(312 374)">
+          <rect id="Rectangle" fill="#F4D79D" x="10.966" y="127.954" width="84.069" height="101.037" rx="42.034"/>
+          <rect id="Rectangle" fill="#595959" width="106" height="219.633" rx="11"/>
+        </g>
+      </g>
+      <g id="body" class="bodyMovement" transform="translate(30 140)">
+        <rect id="Rectangle" fill="#5876D9" x="4.292" width="401.062" height="412" rx="200"/>
+        <path d="M403.17 171.363c1.438 9.678 2.184 19.583 2.184 29.66V212c0 110.457-89.543 200-200 200h-1.062c-110.457 0-200-89.543-200-200v-10.976c0-10.078.746-19.983 2.184-29.66H403.17z" id="Combined-Shape" fill="#595959"/>
+        <path d="M2.37 167.936h404.76c.538 0 .98.428.998.967l.815 25.086c.018.55-.415 1.013-.967 1.03-.01.002-.022.002-.033.002H1.47c-.552 0-1-.448-1-1v-.036l.9-25.086c.02-.538.46-.964 1-.964z" id="Rectangle" fill="#433026"/>
+      </g>
+      <g id="arm_l" class="bodyMovement">
+        <g id="arm_l_bottom" transform="rotate(-13 1529.33 -898.387)">
+          <g id="arm_l_hand" transform="translate(0 118.558)" fill="#F4D79D">
+            <rect id="Rectangle" transform="rotate(2 58.067 54.83)" x="13.202" y="2.53" width="89.731" height="104.598" rx="44.866"/>
+            <rect id="Rectangle" transform="rotate(18 17.32 51.44)" x="6.094" y="32.807" width="22.453" height="37.264" rx="11.227"/>
+          </g>
+          <rect id="Rectangle" fill="#F4D79D" transform="rotate(28 87.455 108.84)" x="42.59" y="10.403" width="89.731" height="196.874" rx="44.866"/>
+          <rect id="Rectangle" fill="#C5C5C5" transform="rotate(26 74.7 92.873)" x="46.172" y="90.242" width="57.055" height="5.261" rx="2.63"/>
+          <rect id="Rectangle" fill="#C5C5C5" transform="rotate(26 68.9 102.533)" x="40.373" y="99.903" width="57.055" height="5.261" rx="2.63"/>
+          <rect id="Rectangle" fill="#C5C5C5" transform="rotate(26 63.102 112.194)" x="34.574" y="109.563" width="57.055" height="5.261" rx="2.63"/>
+          <rect id="Rectangle" fill="#C5C5C5" transform="rotate(26 57.303 121.854)" x="28.775" y="119.224" width="57.055" height="5.261" rx="2.63"/>
+        </g>
+        <g id="arm_l_top" transform="rotate(-13 918.554 -1108.86)">
+          <rect id="Rectangle" fill="#F4D79D" x="6.491" y=".447" width="89.731" height="234.112" rx="44.866"/>
+          <path d="M96.328 89.908V45.365c0-24.807-20.11-44.918-44.92-44.918-24.806 0-44.917 20.11-44.917 44.918v44.543H96.33z" id="Combined-Shape" fill="#5876D9"/>
+          <rect id="Rectangle" fill="#FFF0E8" x=".26" y="84.806" width="102.108" height="13.152" rx="6.576"/>
+        </g>
+      </g>
+      <g id="neck" class="bodyMovement" transform="translate(154 119)">
+        <rect id="Rectangle" fill="#FFF0E8" x="6" width="81" height="82" rx="40.5"/>
+        <rect id="Rectangle" fill="#F4D79D" y="25" width="59" height="28" rx="14"/>
+      </g>
+      <g id="head">
+        <rect id="Rectangle" fill="#F4D79D" x="11.609" width="208.174" height="471" rx="100"/>
+        <rect id="Rectangle" fill="#F4D79D" x="8" y="323" width="111.391" height="19.826" rx="9.913"/>
+        <rect id="Rectangle" fill="#C5C5C5" x="161.348" y="91.279" width="73.043" height="14.605" rx="7.302"/>
+        <rect class="eyebrow" id="eyebrow_l" fill="#C5C5C5" transform="rotate(9 80.522 144.57)" x="49.478" y="131.791" width="62.087" height="25.558" rx="12.779"/>
+        <rect class="eyebrow" id="eyebrow_r" fill="#C5C5C5" transform="rotate(-12 20.565 143.57)" x="2.304" y="130.791" width="36.522" height="25.558" rx="12.779"/>
+        <rect id="Rectangle" fill="#C5C5C5" x="2.304" y="258.884" width="111.391" height="69.116" rx="18"/>
+        <rect id="Rectangle" fill="#C5C5C5" x="172.304" y="124.14" width="62.087" height="10.953" rx="5.477"/>
+        <rect id="Rectangle" fill="#C5C5C5" x="183.261" y="146.047" width="47.478" height="10.953" rx="5.477"/>
+        <rect id="Rectangle" fill="#FFE6B4" x="15" y="96" width="73.043" height="2" rx="1"/>
+        <rect id="Rectangle" fill="#FFE6B4" x="22" y="341" width="65.304" height="3" rx="1.5"/>
+        <rect id="Rectangle" fill="#FFE6B4" x="16" y="83" width="73.043" height="2" rx="1"/>
+        <rect id="Rectangle" fill="#FFE6B4" x="19" y="71" width="73.043" height="2" rx="1"/>
+        <rect id="Rectangle" fill="#FFE2A8" x="154" y="19" width="20" height="20" rx="10"/>
+        <rect id="Rectangle" fill="#FFE2A8" x="154" y="34" width="10" height="10" rx="5"/>
+        <rect id="Rectangle" fill="#FFE2A8" x="161" y="28" width="17" height="17" rx="8.5"/>
+        <rect id="Rectangle" fill="#F4D79D" x="196.522" y="152.698" width="47.478" height="47.465" rx="23.733"/>
+        <rect id="Rectangle" fill="#DDC38E" x="206" y="162" width="29.217" height="29.209" rx="14.605"/>
+        <rect id="Rectangle" fill="#D86B6B" x=".652" y="149.698" width="87.652" height="127.791" rx="43.826"/>
+      </g>
+    </g>
+  </g>
+</svg>
+
+  <script src='js/TweenMax.min.js'></script>
+<script src='js/jquery.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

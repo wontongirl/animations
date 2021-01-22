@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>CSS3实现的3D图片切换效果</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<!-- Use jQuery for best compatibility with other CSS3 enabled browsers -->
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/flux.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+			$(function(){
+				if(!flux.browser.supportsTransitions)
+					alert("Flux Slider requires a browser that supports CSS3 transitions");
+					
+				window.f = new flux.slider('#slider', {
+					pagination: false,
+					controls: false,
+					transitions: ['explode', 'tiles3d', 'bars3d', 'cube', 'turn'],
+					autoplay: false
+				});
+				
+				$('.transitions').click(function(event){
+					event.preventDefault();
+					window.f.next($(event.target).data('transition'), $(event.target).data('params'));
+				});
+			});
+		</script>
+</head>
+<body>
+
+<section class="container">
+  <h1>3D Image Transitions</h1>
+  <h2>Mozilla Dev Derby March 2012</h2>
+  <div id="slider"> <img src="img/peacock.jpg" alt="" /> <img src="img/koi.jpg" alt="" /> <img src="img/life.jpg" alt="" /> </div>
+  <ul class="transitions">
+    <li>
+      <button type="button" data-transition="explode" data-params='{"rows": 4}'>Explode</button>
+    </li>
+    <li>
+      <button type="button" data-transition="tiles3d" data-params='{"columns": 6}'>Tile</button>
+    </li>
+    <li>
+      <button type="button" data-transition="bars3d">Bars</button>
+    </li>
+    <li>
+      <button type="button" data-transition="cube">Cube</button>
+    </li>
+    <li>
+      <button type="button" data-transition="turn">Turn</button>
+    </li>
+  </ul>
+
+</section>
+</body>
+</html>

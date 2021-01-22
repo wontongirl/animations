@@ -1,0 +1,1450 @@
+/* 			Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700)
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,500,700)
+
+/*
+ *
+ *Template: Avalin
+ *Author: MrWP
+ *Website: http://zmedia.ir
+ *
+ *Content:
+ *
+ * 1 - General
+ * 2 - Home
+ * 3 - Navigation
+ * 4 - About Boxes
+ * 5 - Our Team
+ * 6 - Portfolio
+ * 7 - Services
+ * 8 - Blog
+ * 9 - Prices
+ * 10- Google Map
+ * 11 - Contact
+ * 12 - Footer
+
+/*===================================================================================
+/*  								1 - General
+/*===================================================================================
+
+\::selection
+  background-color: #333
+  color: #fff
+
+html, body
+  background: #fff
+  width: 100%
+  height: 100%
+  padding: 0
+  font-family: 'Open Sans', sans-serif
+  -webkit-font-smoothing: antialiased
+
+a
+  color: #464646
+  text-decoration: none
+  outline: none
+  &:hover, &:active, &:focus
+    color: #464646
+    text-decoration: none
+    outline: none
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  font-family: 'Open Sans', sans-serif
+  font-weight: 100
+
+p
+  margin: 0 0 5px
+
+.clear
+  clear: both
+
+.shadow
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+
+.rounded
+  border-radius: 10px
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  -ms-border-radius: 10px
+  -o-border-radius: 10px
+
+ol, ul
+  list-style: none
+  padding: 0
+
+.animated
+  visibility: hidden
+
+.visible
+  visibility: visible
+
+#pageloader
+  width: 100%
+  height: 100%
+  position: fixed
+  background-color: #555
+  z-index: 999999
+
+.loader
+  position: absolute
+  width: auto
+  height: height
+  margin: -25px 0 0 -25px
+  top: 50%
+  left: 50%
+  text-align: center
+  h2
+    color: #ccc
+    margin: 0 auto
+    font-size: 20px
+
+.contain
+  overflow: hidden
+  width: 100%
+  position: relative
+  height: auto
+
+.inner
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+  padding: 40px 0
+  position: relative
+  z-index: 2
+
+.contain-logo
+  margin: auto
+  width: 64px
+  height: 64px
+  background: white
+  border: 1px solid #bcbcbc
+  padding: 18px 0
+  text-align: center
+  position: relative
+  top: -32px
+  border-radius: 100px
+  i
+    font-size: 30px
+    color: #bcbcbc
+    font-weight: light
+
+.br, .br-b
+  top: -72px
+
+.header
+  margin: auto
+  font-family: 'Open Sans'
+  font-size: 38px
+  color: #222
+  font-weight: 300
+  text-transform: uppercase
+  width: 50%
+  text-align: center
+  position: relative
+  letter-spacing: 8px
+  padding: 20px 0
+  text-transform: uppercase
+  border-top: #FFA300 1px solid
+  border-bottom: #FFA300 1px solid
+  opacity: 0.7
+
+.description
+  margin: 15px auto
+  font-size: 18px
+  font-weight: 300
+  text-transform: uppercase
+  width: 100%
+  max-width: 860px
+  text-align: center
+  opacity: 0.7
+
+/*===================================================================================
+/*  								2 - Home
+/*===================================================================================
+
+#home
+  width: 100%
+  height: auto
+  position: relative
+
+.home-pic
+  background: url(../images/main.jpg) center fixed
+
+#slides
+  position: relative
+  .slides-container
+    display: none
+    div, img
+      width: 100%
+      height: 100%
+    .image1
+      background: url(../images/1.jpg) center fixed
+    .image2
+      background: url(../images/2.jpg) center fixed
+    .image3
+      background: url(../images/3.jpg) center fixed
+  .scrollable
+    *zoom: 1
+    position: relative
+    top: 0
+    left: 0
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    height: 100%
+    &:after
+      content: ""
+      display: table
+      clear: both
+
+.slides-navigation
+  margin: 0 auto
+  position: absolute
+  z-index: 3
+  top: 45%
+  width: 100%
+  a
+    position: absolute
+    display: block
+    width: 74px
+    height: 74px
+    background: url(../images/arrows.png)
+    opacity: 0
+    -webkit-transition: all 0.5s
+    -moz-transition: all 0.5s
+    transition: all 0.5s
+    &.prev
+      left: 1%
+      background-position: bottom center
+    &.next
+      right: 1%
+      background-position: top center
+
+#home:hover .slides-navigation a
+  opacity: 0.3
+
+.slides-navigation a:hover
+  opacity: 1 !important
+
+.main
+  position: absolute
+  width: 100%
+  top: 50%
+  margin: 0 auto
+  z-index: 2
+  background: transparent
+  height: auto
+  min-height: 300px
+  -webkit-transform: translateY(-50%)
+  -moz-transform: translateY(-50%)
+  transform: translateY(-50%)
+  text-align: center
+  ul
+    height: auto
+    min-height: 160px
+    padding: 0
+    margin: 0 auto
+    position: relative
+    li
+      list-style: none
+      font-family: "Raleway"
+      font-weight: 300
+      font-size: 95px
+      color: white
+      text-transform: uppercase
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4)
+      span
+        color: #FFA300
+
+.home-slider
+  width: 100%
+
+.home-p
+  width: 100%
+  max-width: 670px
+  margin: 35px auto
+  position: relative
+  text-align: center
+  color: white
+  font-size: 20px
+  font-weight: 300
+  text-transform: uppercase
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1)
+
+.button-ready
+  width: 170px
+  height: auto
+  padding: 10px 23px
+  border: 1px solid white
+  background: rgba(43, 43, 43, 0.1)
+  color: white
+  font-weight: 300
+  text-transform: uppercase
+  font-size: 20px
+  cursor: pointer
+  margin: 35px auto
+  display: block
+  text-align: center
+  -webkit-transition: all 0.5s
+  -moz-transition: all 0.5s
+  transition: all 0.5s
+  &:hover
+    background: rgba(255, 163, 0, 0.8)
+    color: #FFF
+    text-decoration: none
+
+/*===================================================================================
+/*  								3 - Navigation
+/*===================================================================================
+
+#navigation
+  width: 100%
+  border-bottom: 1px solid #e2e2e2
+  position: absolute
+  z-index: 9999
+  background: #fff
+  height: 82px
+  .navigation
+    padding: 0
+    height: 100%
+
+.navigation .logo
+  float: left
+  position: absolute
+  z-index: 999
+  a
+    width: auto
+    display: block
+    margin: 20px 0 0
+
+.nav-menu
+  width: auto
+  float: right
+  height: 82px
+  text-align: right
+  ul
+    padding: 0
+    margin: 0
+    li
+      height: 82px
+      width: auto
+      display: block
+      float: left
+      list-style: none
+      padding: 0
+      margin: 0
+      a
+        height: 82px
+        padding: 33px 15px
+        display: block
+        text-transform: uppercase
+        font-size: 14px
+        text-align: center
+        color: #464646
+        -webkit-transition: all 0.5s
+        -moz-transition: all 0.5s
+        transition: all 0.5s
+      &:first-child a
+        padding-left: 0
+      &:last-child a
+        padding-right: 0
+  a
+    &:hover, &.active
+      color: #FFA300
+
+.main-nav
+  > li > a
+    &:hover, &:focus
+      background: none
+  li.active a
+    color: #FFA300
+
+/* 		Mobile
+
+.mobile-drop
+  height: 100%
+  width: 100%
+  display: none
+
+a.mobile-menu
+  position: absolute
+  top: 50%
+  font-size: 21px
+  right: 30px
+  left: auto
+  -webkit-transform: translateY(-50%)
+  -moz-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+.mobile-drop ul.fullwidth
+  width: 100%
+  position: relative
+  li
+    width: 100%
+    height: auto
+    margin: 0
+    a
+      padding: 10px
+      margin: 0
+      height: auto
+      text-align: left
+      text-transform: uppercase
+      border-bottom: 1px solid #ededed
+      -webkit-transition: all 0.3s
+      -moz-transition: all 0.3s
+      transition: all 0.3s
+    &.active a
+      background-color: #333
+      color: white
+
+/*===================================================================================
+/*  								4 - About Boxes
+/*===================================================================================
+
+#about
+  background: url(../images/bg-about.jpg) center fixed
+  padding: 30px 0 30px
+  top: 0
+
+.services_outer
+  background-color: #fff
+
+.bubble
+  position: absolute
+  border-radius: 50%
+  left: 50%
+  top: 50%
+  z-index: 0
+  background-color: rgba(242, 242, 242, 0.6)
+
+.bubble_outer_one, .bubble_outer_two, .bubble_outer_three
+  height: 150px
+  width: 150px
+  margin: 20px auto 0
+  border-radius: 50%
+  position: relative
+  background: rgba(242, 242, 242, 1)
+
+.bubble_container
+  i
+    display: block
+    font-size: 5.5em
+    color: #FFA300
+    height: 100%
+    margin: 0 auto
+    padding: 23%
+    text-align: center
+    width: 100%
+    &:hover
+      display: block
+      font-size: 5.5em
+      color: #FFF
+      height: 100%
+      margin: 0 auto
+      padding: 23%
+      text-align: center
+      width: 100%
+  -webkit-transition: all 0.5s
+  -moz-transition: all 0.5s
+  transition: all 0.5s
+  border-radius: 50%
+  &:hover
+    z-index: 10
+    height: 150px
+    width: 150px
+    margin: 20px auto 0
+    border-radius: 50%
+    position: relative
+    background: #FFA300
+    -webkit-transform: scale(1.1)
+    -moz-transform: scale(1.1)
+    -ms-transform: scale(1.1)
+    transform: scale(1.1)
+    border: -2px solid #e1e1e1
+
+.about_line
+  border-bottom: 2px solid #e1e1e1
+  width: 20%
+  margin: 25px auto
+
+.about_article
+  text-align: center
+
+/*===================================================================================
+/*  								5 - Our Team
+/*===================================================================================
+
+.grid
+  .figure .hidden a i
+    width: 25px
+    height: 25px
+    display: inline-block
+    text-align: center
+    font-size: 12px
+    border: 1px solid rgba(255, 255, 255, 0.7)
+    margin-top: 5px
+    margin-right: 5px
+    line-height: 22px
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+  > li
+    opacity: 100
+    &.mypassion-animation
+      -webkit-animation: animation-btt 1s 1 ease
+      -moz-animation: animation-btt 1s 1 ease
+      -o-animation: animation-btt 1s 1 ease
+      animation: animation-btt 1s 1 ease
+      opacity: 1
+  list-style: none
+  padding: 0
+  text-align: center
+  li!
+  .figure
+    margin: 0
+    position: relative
+    img
+      width: 100%
+      display: block
+  .figcaption
+    position: absolute
+    top: 0
+    left: 0
+    h3
+      margin: 0
+      padding: 0
+
+.no-touch .cs-style-1 .figure:hover h4
+  -webkit-transform: translateY(-280px)
+  -moz-transform: translateY(-280px)
+  -ms-transform: translateY(-280px)
+  transform: translateY(-280px)
+
+.cs-style-1 .figcaption
+  height: 100%
+  width: 100%
+  opacity: 0
+  text-align: center
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  backface-visibility: hidden
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s
+  transition: transform 0.3s, opacity 0.3s
+  -webkit-transform: translateY(-15px)
+  -moz-transform: translateY(-15px)
+  -ms-transform: translateY(-15px)
+  transform: translateY(-15px)
+
+.no-touch .cs-style-1 .figure:hover .figcaption
+  opacity: 1
+  -webkit-transform: translateY(0)
+  -moz-transform: translateY(0)
+  -ms-transform: translateY(0)
+  transform: translateY(0)
+
+.cs-style-1
+  .figure.cs-hover .figcaption
+    opacity: 1
+    -webkit-transform: translateY(0)
+    -moz-transform: translateY(0)
+    -ms-transform: translateY(0)
+    transform: translateY(0)
+  .figcaption
+    h3
+      margin-top: 70px
+    span
+      margin-top: 70px
+      font-size: 15px
+      display: block
+    p
+      margin-top: 20px
+      font-size: 13px
+      display: block
+      padding: 0 30px
+      opacity: 1
+    a
+      width: 30px
+      height: 30px
+      display: inline-block
+      text-align: center
+      border: 1px solid rgba(255, 255, 255, 0.7)
+      margin-top: 30px
+      margin-right: 5px
+      -webkit-border-radius: 50%
+      -moz-border-radius: 50%
+      border-radius: 50%
+      -webkit-box-sizing: border-box
+      /* Safari/Chrome, other WebKit
+      -moz-box-sizing: border-box
+      /* Firefox, other Gecko
+      box-sizing: border-box
+      /* Opera/IE 8+
+      &:hover
+        border: 1px solid rgba(255, 255, 255, 1)
+      i
+        text-align: center
+        font-size: 15px
+        line-height: 28px
+
+@media screen and (max-width: 31.5em)
+  .grid
+    padding: 0
+    li
+      width: 100%
+      min-width: 300px
+
+section#team
+  background: #fff
+
+.grid
+  .figure .hidden
+    background: #2c3f52
+    span
+      color: #fff
+    p
+      color: #333
+    a i
+      color: rgba(255, 255, 255, 0.7)
+  .figcaption
+    background: rgba(242, 242, 242, 1)
+    color: #FFA300
+    h3
+      color: #fff
+    span:before
+      color: #FFA300
+
+.cs-style-1
+  h4
+    background: #FFA300
+    color: #fff
+  .figcaption
+    span
+      color: rgba(255, 163, 0, 1)
+    p
+      color: #555
+    a
+      color: rgba(255, 163, 0, 1)
+      &:hover
+        color: rgba(255, 163, 0, 1)
+      i
+        color: rgba(255, 163, 0, 1)
+        -webkit-transition: all 0.5s
+        -moz-transition: all 0.5s
+        transition: all 0.5s
+      &:hover i
+        color: rgba(102, 102, 102, 1)
+
+.grid
+  list-style: none
+  padding: 0
+  text-align: center
+  li!
+  .figure
+    margin: 0
+    position: relative
+    img
+      width: 100%
+      display: block
+  .figcaption
+    position: absolute
+    top: 0
+    left: 0
+    h3
+      margin: 0
+      padding: 0
+
+.cs-style-1 h4
+  position: relative
+  height: 100%
+  width: 100%
+  opacity: 1
+  text-align: center
+  padding: 5px 0
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s
+  -moz-transition: -moz-transform 0.1s, opacity 0.1s
+  transition: transform 0.3s, opacity 0.3s
+  -webkit-transform: translate(0, 0)
+  -moz-transform: translate(0, 0)
+  -ms-transform: translate(0, 0)
+  transform: translate(0, 0)
+
+.second-section
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+  padding: 60px 0
+  position: relative
+  z-index: 2
+
+/*===================================================================================
+/*  								6 - Portfolio
+/*===================================================================================
+
+#portfolio
+  font-weight: 300
+
+.works
+  position: relative
+  height: auto
+
+/* Filter Menu
+
+.filter-menu
+  position: relative
+  z-index: 1000
+
+.filters
+  width: 100%
+  text-align: center
+  padding: 0
+  margin: 40px auto 35px
+
+.inline
+  font-size: 0px
+
+.filters li
+  text-align: center
+  display: inline-block
+  font-size: 15px
+  a
+    padding: 13px 20px
+    color: #FFF
+    border: none
+    text-transform: uppercase
+    background: #333
+    -webkit-transition: all 0.5s
+    -moz-transition: all 0.5s
+    transition: all 0.5s
+    &.selected
+      color: #FFF
+      background: #FFA300
+      cursor: default
+  &:last-child a
+    padding-right: 25px
+  &:first-child a
+    padding-left: 25px
+  &:hover a
+    background: #FFA300
+    color: white
+
+.items
+  position: relative
+  height: auto
+
+.work
+  margin: 9px 0
+  padding: 0 9px
+  height: auto
+  color: #aaaaaa
+  cursor: pointer
+  overflow: hidden
+
+.portfolio-inner
+  border: 1px solid #ebebeb
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+
+.portfolio-img
+  width: 100%
+  position: relative
+  overflow: hidden
+  img
+    width: 100%
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+
+.portfolio-desc
+  width: 100%
+  background: white
+  margin: 0
+  text-align: center
+  padding: 15px 5px
+  h4
+    text-transform: uppercase
+    font-size: 20px
+    margin: 0
+  p
+    font-size: 15px
+    margin: 0
+
+.portfolio-img
+  .button
+    width: 42px
+    height: 42px
+    display: block
+    border-radius: 100px
+    background: white
+    position: absolute
+    text-align: center
+    padding: 11px 0 0
+    font-size: 15px
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+    &:hover
+      background: #ffa300
+      color: white
+  .zoom
+    left: 37%
+    top: 20%
+    opacity: 0
+  .detail
+    right: 37%
+    bottom: 20%
+    opacity: 0
+
+.work:hover .portfolio-img
+  img
+    opacity: 0.8
+    transform: scale(1.33)
+    -ms-transform: scale(1.33)
+    -webkit-transform: scale(1.33)
+  .zoom
+    top: 50%
+    opacity: 1
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    transform: translateY(-50%)
+  .detail
+    bottom: 50%
+    opacity: 1
+    -webkit-transform: translateY(50%)
+    -moz-transform: translateY(50%)
+    transform: translateY(50%)
+
+/* isotope styles
+
+.isotope-item
+  z-index: 2
+
+.isotope-hidden.isotope-item
+  pointer-events: none
+  z-index: 1
+
+.isotope
+  -webkit-transition-duration: 0.8s
+  -moz-transition-duration: 0.8s
+  -ms-transition-duration: 0.8s
+  -o-transition-duration: 0.8s
+  transition-duration: 0.8s
+  .isotope-item
+    -webkit-transition-duration: 0.8s
+    -moz-transition-duration: 0.8s
+    -ms-transition-duration: 0.8s
+    -o-transition-duration: 0.8s
+    transition-duration: 0.8s
+    -webkit-transition-property: -webkit-transform, opacity
+    -moz-transition-property: -moz-transform, opacity
+    -ms-transition-property: -ms-transform, opacity
+    -o-transition-property: -o-transform, opacity
+    transition-property: transform, opacity
+  -webkit-transition-property: height, width
+  -moz-transition-property: height, width
+  -ms-transition-property: height, width
+  -o-transition-property: height, width
+  transition-property: height, width
+  &.no-transition
+    -webkit-transition-duration: 0s
+    -moz-transition-duration: 0s
+    -ms-transition-duration: 0s
+    -o-transition-duration: 0s
+    transition-duration: 0s
+    .isotope-item
+      -webkit-transition-duration: 0s
+      -moz-transition-duration: 0s
+      -ms-transition-duration: 0s
+      -o-transition-duration: 0s
+      transition-duration: 0s
+  .isotope-item.no-transition
+    -webkit-transition-duration: 0s
+    -moz-transition-duration: 0s
+    -ms-transition-duration: 0s
+    -o-transition-duration: 0s
+    transition-duration: 0s
+
+/*===================================================================================
+/*  								7 - Services
+/*===================================================================================
+
+#services
+  margin: 0 auto
+  background: url("../images/bg-services.jpg") center fixed
+
+.service-icon
+  margin: 30px 0
+  span
+    float: left
+    display: inline-block
+    -webkit-border-radius: 100%
+    -moz-border-radius: 100%
+    border-radius: 100%
+    width: 70px
+    height: 70px
+    line-height: 70px
+    text-align: center
+    font-size: 30px
+    color: #FFF
+    background: #a9a9a9
+    margin: 0 25px 10px !important
+    -webkit-transition: all .3s ease-in-out
+    -moz-transition: all .3s ease-in-out
+    -ms-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+  &:hover span
+    background: #666
+  &.float
+    text-align: right
+    span
+      float: right
+
+.service-box
+  width: 100%
+  height: 300px
+  overflow: hidden
+  position: relative
+  -webkit-transition: all 300ms linear
+  -moz-transition: all 300ms linear
+  -o-transition: all 300ms linear
+  -ms-transition: all 300ms linear
+  transition: all 300ms linear
+  padding: 20px
+  margin: 20px auto
+  .wrap
+    text-align: left
+    width: 100%
+    height: 100%
+    display: block
+    color: #333
+    position: relative
+    span
+      color: #FFA300
+      font-size: 75px
+      text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.7)
+      line-height: 150px
+      position: absolute
+      width: 100%
+      height: 50%
+      left: 0px
+      top: 0px
+      text-align: center
+      -webkit-transition: all 300ms linear
+      -moz-transition: all 300ms linear
+      -o-transition: all 300ms linear
+      -ms-transition: all 300ms linear
+      transition: all 300ms linear
+    .content
+      position: absolute
+      left: 0px
+      width: 100%
+      height: 50%
+      top: 50%
+      h4, p
+        text-align: center
+        color: #555
+        -webkit-transition: all 200ms linear
+        -moz-transition: all 200ms linear
+        -o-transition: all 200ms linear
+        -ms-transition: all 200ms linear
+        transition: all 200ms linear
+  &:hover
+    background: rgba(255, 163, 0, 1)
+    .wrap
+      span
+        font-size: 100px
+        color: #FFF
+        -webkit-animation: moveFromLeft 400ms ease
+        -moz-animation: moveFromLeft 400ms ease
+        -ms-animation: moveFromLeft 400ms ease
+      h4
+        color: #FFF
+        -webkit-animation: moveFromRight 300ms ease
+        -moz-animation: moveFromRight 300ms ease
+        -ms-animation: moveFromRight 300ms ease
+      p
+        color: #FFF
+        -webkit-animation: moveFromBottom 500ms ease
+        -moz-animation: moveFromBottom 500ms ease
+        -ms-animation: moveFromBottom 500ms ease
+
+@-webkit-keyframes moveFromLeft
+  from
+    -webkit-transform: translateX(-100%)
+  to
+    -webkit-transform: translateX(0%)
+
+
+@-moz-keyframes moveFromLeft
+  from
+    -moz-transform: translateX(-100%)
+  to
+    -moz-transform: translateX(0%)
+
+
+@-ms-keyframes moveFromLeft
+  from
+    -ms-transform: translateX(-100%)
+  to
+    -ms-transform: translateX(0%)
+
+
+@-webkit-keyframes moveFromRight
+  from
+    -webkit-transform: translateX(100%)
+  to
+    -webkit-transform: translateX(0%)
+
+
+@-moz-keyframes moveFromRight
+  from
+    -moz-transform: translateX(100%)
+  to
+    -moz-transform: translateX(0%)
+
+
+@-ms-keyframes moveFromRight
+  from
+    -ms-transform: translateX(100%)
+  to
+    -ms-transform: translateX(0%)
+
+
+@-webkit-keyframes moveFromBottom
+  from
+    -webkit-transform: translateY(100%)
+  to
+    -webkit-transform: translateY(0%)
+
+
+@-moz-keyframes moveFromBottom
+  from
+    -moz-transform: translateY(100%)
+  to
+    -moz-transform: translateY(0%)
+
+
+@-ms-keyframes moveFromBottom
+  from
+    -ms-transform: translateY(100%)
+  to
+    -ms-transform: translateY(0%)
+
+
+/*===================================================================================
+/*  								8 - Blog
+/*===================================================================================
+
+#blog
+  margin: 0 auto
+
+.post-item
+  background-color: #fff
+  overflow: hidden
+  color: #666
+
+.post-content
+  padding: 30px 30px 20px
+  text-align: center
+  overflow: hidden
+  h5
+    font-weight: bold
+    padding: 0 0 20px
+    color: #454545
+    border-bottom: 1px solid #ccc
+    margin: 0 -30px 20px
+
+.post-img
+  -webkit-transition: all 0.5s
+  -moz-transition: all 0.5s
+  transition: all 0.5s
+  width: 100%
+  position: relative
+  &:hover
+    transform: scale(1.37)
+    -ms-transform: scale(1.37)
+    -webkit-transform: scale(1.37)
+
+.post-content .entry
+  font-size: 13px
+  line-height: 20px
+  border-bottom: 1px solid #ccc
+  margin: 0 -30px 20px
+  padding: 0 30px
+
+.post-meta
+  a
+    font-size: 13px
+    color: #999
+    &:active
+      font-size: 13px
+      color: #999
+    &:hover
+      color: #444
+  ul li
+    margin-right: 5px
+    display: inline-block
+    i
+      padding-right: 5px
+      color: #FFA300
+
+/*===================================================================================
+/*  								9 - Prices
+/*===================================================================================
+
+#prices
+  background: url("../images/bg-prices.jpg") center fixed
+
+.price-pack
+  background: none repeat scroll 0 0 #FFFFFF
+  margin-bottom: 10px
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4)
+  padding-bottom: 20px
+  margin-bottom: 40px
+
+.package-header, .package-price
+  padding: 20px
+  margin-bottom: 20px
+
+.package-header
+  background: url(../images/pat-p.png) repeat scroll 0 0 #333333
+  color: #FFA300
+  height: 140px
+  > h3
+    color: #FCFCFC
+    text-transform: uppercase
+
+.package-price
+  background: rgba(226, 226, 226, 1)
+  background: -moz-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 26%, rgba(209, 209, 209, 1) 81%, rgba(219, 216, 219, 1) 100%)
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226, 226, 226, 1)), color-stop(26%, rgba(219, 219, 219, 1)), color-stop(81%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(219, 216, 219, 1)))
+  background: -webkit-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 26%, rgba(209, 209, 209, 1) 81%, rgba(219, 216, 219, 1) 100%)
+  background: -o-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 26%, rgba(209, 209, 209, 1) 81%, rgba(219, 216, 219, 1) 100%)
+  background: -ms-linear-gradient(left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 26%, rgba(209, 209, 209, 1) 81%, rgba(219, 216, 219, 1) 100%)
+  background: linear-gradient(to right, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 26%, rgba(209, 209, 209, 1) 81%, rgba(219, 216, 219, 1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e2e2', endColorstr='#dbd8db', GradientType=1 )
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75)
+  -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75)
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75)
+  border-radius: 60px
+  -moz-border-radius: 60px
+  -webkit-border-radius: 60px
+  -ms-border-radius: 60px
+  -o-border-radius: 60px
+  color: #555
+  font-size: 40px
+  height: 112px
+  line-height: 62px
+  margin: -60px auto
+  width: 112px
+  > p
+    color: #555
+    font-size: 14px
+    font-style: italic
+    line-height: 0
+
+.package-features
+  margin-top: 80px
+
+.price-pack
+  ul
+    list-style: none outside none
+    li
+      color: #747474
+      cursor: pointer
+      margin-bottom: 12px
+  .btn
+    display: block
+    margin: 0 25px 20px
+    -webkit-transition: all 0.5s
+    -moz-transition: all 0.5s
+    transition: all 0.5s
+    &:hover
+      background-color: #FFA300
+      color: #FFFFFF
+
+.border-btn, .social-btn
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0)
+  border-radius: 0
+  box-shadow: none
+  text-shadow: none
+
+.border-btn
+  border: 2px solid #FFA300
+  color: #333
+  font-size: 16px
+  padding: 10px 30px
+  text-transform: uppercase
+
+.price-pack-features
+  background: none repeat scroll 0 0 #FFA300
+  margin-bottom: 10px
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4)
+  padding-bottom: 20px
+  margin-bottom: 40px
+
+.package-header-features, .package-price-features
+  padding: 20px
+  margin-bottom: 20px
+
+.package-header-features
+  background: url(../images/pat-p.png) repeat scroll 0 0 #333333
+  color: #666
+  height: 140px
+  > h3
+    color: #FFF
+    text-transform: uppercase
+
+.package-price-features
+  background: rgba(212, 204, 212, 1)
+  background: -moz-linear-gradient(left, rgba(212, 204, 212, 1) 0%, rgba(184, 184, 184, 1) 26%, rgba(143, 141, 143, 1) 81%, rgba(145, 140, 145, 1) 100%)
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212, 204, 212, 1)), color-stop(26%, rgba(184, 184, 184, 1)), color-stop(81%, rgba(143, 141, 143, 1)), color-stop(100%, rgba(145, 140, 145, 1)))
+  background: -webkit-linear-gradient(left, rgba(212, 204, 212, 1) 0%, rgba(184, 184, 184, 1) 26%, rgba(143, 141, 143, 1) 81%, rgba(145, 140, 145, 1) 100%)
+  background: -o-linear-gradient(left, rgba(212, 204, 212, 1) 0%, rgba(184, 184, 184, 1) 26%, rgba(143, 141, 143, 1) 81%, rgba(145, 140, 145, 1) 100%)
+  background: -ms-linear-gradient(left, rgba(212, 204, 212, 1) 0%, rgba(184, 184, 184, 1) 26%, rgba(143, 141, 143, 1) 81%, rgba(145, 140, 145, 1) 100%)
+  background: linear-gradient(to right, rgba(212, 204, 212, 1) 0%, rgba(184, 184, 184, 1) 26%, rgba(143, 141, 143, 1) 81%, rgba(145, 140, 145, 1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4ccd4', endColorstr='#918c91', GradientType=1 )
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75)
+  -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75)
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75)
+  border-radius: 60px
+  -moz-border-radius: 60px
+  -webkit-border-radius: 60px
+  -ms-border-radius: 60px
+  -o-border-radius: 60px
+  color: #fff
+  font-size: 40px
+  height: 112px
+  line-height: 62px
+  margin: -60px auto
+  width: 112px
+  > p
+    color: #FFF
+    font-size: 14px
+    font-style: italic
+    line-height: 0
+
+.package-features
+  margin-top: 80px
+
+.price-pack-features
+  ul
+    list-style: none outside none
+    li
+      color: #fff
+      cursor: pointer
+      margin-bottom: 12px
+  .btn
+    display: block
+    margin: 0 25px 20px
+    -webkit-transition: all 0.5s
+    -moz-transition: all 0.5s
+    transition: all 0.5s
+    &:hover
+      background-color: #333
+      color: #FFFFFF
+
+.border-btn-features, .social-btn
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0)
+  border-radius: 0
+  box-shadow: none
+  text-shadow: none
+
+.border-btn-features
+  border: 2px solid #FFF
+  color: #fff
+  font-size: 16px
+  padding: 10px 30px
+  text-transform: uppercase
+
+/*===================================================================================
+/*  								10 - Google Map
+/*===================================================================================
+
+.gmap_outer
+  background-color: #eee
+  height: 380px
+
+#map-canvas
+  margin: 0
+  padding: 0
+  height: 100%
+  img
+    max-width: none
+
+.gmnoprint span
+  display: none
+
+/*===================================================================================
+/*  								11 - Contact
+/*===================================================================================
+
+#contact
+  width: 100%
+  height: auto
+  float: left
+  padding: 40px 0 10px 0
+  background: url("../images/bg-contact.png") no-repeat center fixed #cccccc
+  .text-center
+    margin-bottom: 30px
+    span.border-circle
+      border-bottom: 2px solid #fff
+      margin-bottom: 20px
+
+/* 		Contact Form
+
+.contact-form
+  width: 100%
+  float: left
+  background: transparent
+  position: relative
+  top: 0
+  padding: 45px 70px
+  z-index: 5
+  left: 70%
+  -webkit-transform: translateX(-585px)
+  -moz-transform: translateX(-585px)
+  transform: translateX(-585px)
+
+input, textarea, select
+  font: 16px
+  -webkit-transition: all 300ms ease-in-out
+  -moz-transition: all 300ms ease-in-out
+  -ms-transition: all 300ms ease-in-out
+  -o-transition: all 300ms ease-in-out
+  transition: all 300ms ease-in-out
+
+.contact-form1
+  input
+    &[type=text], &[type=password], &[type=date], &[type=email]
+      margin: 20px auto
+      padding: 10px 15px
+      width: 100%
+      border: 1px solid #FFA300
+      font: 16px
+      -webkit-transition: all 300ms ease-in-out
+      -moz-transition: all 300ms ease-in-out
+      -ms-transition: all 300ms ease-in-out
+      -o-transition: all 300ms ease-in-out
+      transition: all 300ms ease-in-out
+  select, textarea
+    margin: 20px auto
+    padding: 10px 15px
+    width: 100%
+    border: 1px solid #FFA300
+    font: 16px
+    -webkit-transition: all 300ms ease-in-out
+    -moz-transition: all 300ms ease-in-out
+    -ms-transition: all 300ms ease-in-out
+    -o-transition: all 300ms ease-in-out
+    transition: all 300ms ease-in-out
+  select
+    padding: 8px 15px
+    border: 1px solid #FFA300
+    width: 100%
+  textarea
+    min-height: 100px
+
+.btn-c
+  border: 2px solid #FFA300
+  color: #333
+  font-size: 16px
+  padding: 10px 30px
+  text-transform: uppercase
+  background: rgba(255, 163, 0, 1)
+  color: #fff
+  margin: 0 25px 20px
+  -webkit-transition: all 0.5s
+  -moz-transition: all 0.5s
+  transition: all 0.5s
+  float: right
+  &:hover
+    background-color: #FFA300
+    color: #AAA
+
+.contact-widget
+  width: auto
+  height: auto
+  float: left
+  padding: 23px 10px 0 10px
+  margin-top: 42px
+  i
+    float: left
+    margin-right: 20px
+    margin-bottom: 10px
+    background: #FFA300
+    padding: 11px 11px 9px 9px
+    position: relative
+    -webkit-border-radius: 2px
+    -moz-border-radius: 2px
+    border-radius: 2px
+    color: #fff
+    &:after
+      top: 50%
+      right: -12px
+      border: solid transparent
+      content: ""
+      height: 0
+      width: 0
+      position: absolute
+      border-left-color: #f6653c
+      border-width: 6px
+      margin: -6px 0 0 0
+  .clearfix
+    margin-bottom: 20px
+  p
+    color: #FFF
+    margin-bottom: 10px
+
+/*===================================================================================
+/*  								12 - Footer
+/*===================================================================================
+
+#footer
+  background: #222
+
+.footer
+  text-align: center
+  padding: 20px 0
+  a
+    cursor: pointer
+    -webkit-transition: all 0.5s
+    -moz-transition: all 0.5s
+    transition: all 0.5s
+
+.footer-links
+  display: inline-block
+  border: 1px solid #FFA300
+  border-radius: 100px
+  margin: 0 3px
+  i
+    font-size: 25px
+    color: #FFA300
+    display: block
+    width: 35px
+    height: 35px
+    line-height: 38px
+    -webkit-transition: all 0.5s
+    -moz-transition: all 0.5s
+    transition: all 0.5s
+
+.footer-text
+  margin: 10px 0 0 0
+  color: #FFF
+  font-size: 15px
+  font-weight: 300
+  span
+    margin: 0 5px
+
+.copyright
+  text-transform: uppercase
+  margin: 4px 0 0
+
+.footer
+  .footer-links:hover
+    border: 1px solid white
+  a:hover i
+    color: white

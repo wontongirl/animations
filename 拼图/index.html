@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ <title></title>
+
+ <style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+#box {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	border: 1px solid #ccc;
+}
+.pic {
+	width: 528px;
+	margin: 16px auto 0px;
+}
+.pic>div {
+	display: inline-block;
+}
+#box img {
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+#box .pj, #box .p2, #box .p3, #box .p4, #box .p5, #box .p6, #box .p7, #box .p8, #box .p9 {
+	position: absolute;
+}
+#box .pj, #box .p2, #box .p3 {
+	top: 0px;
+}
+#box .p4, #box .p5, #box .p6 {
+	top: 100px;
+}
+#box .p7, #box .p8, #box .p9 {
+	top: 200px;
+}
+#box .pj, #box .p4, #box .p7 {
+	left: 0px;
+}
+#box .p2, #box .p5, #box .p8 {
+	left: 100px;
+}
+#box .p3, #box .p6, #box .p9 {
+	left: 200px;
+}
+#button {
+	padding: 6px;
+	color: #fff;
+	background: #574a4a;
+	border-radius: 4px;
+	margin: 0 auto;
+	display: block
+}
+#output {
+	width: 170px;
+	height: 170px;
+	margin-left: 50px;
+}
+#output img {
+	height: 170px;
+	width: 170px;
+	float: right;
+	border: 1px solid #ccc;
+}
+.time, .bu {
+	width: 300px;
+	height: 30px;
+	clear: both;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #574a4a;
+	margin: 10px auto;
+	border-radius: 4px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="pic">
+   <div id="box"> <img class="pj" src="images/201__.png"> <img class="p2" src="images/202.png"> <img class="p3" src="images/203.png"> <img class="p4"  src="images/204.png"> <img class="p5" src="images/205.png"> <img class="p6" src="images/206.png"> <img class="p7" src="images/207.png"> <img class="p8" src="images/208.png"> <img class="p9" src="images/209.png"> </div>
+   <div id="output"> <img alt="" src="images/2.jpg"> </div>
+ </div>
+<!-- 提示 -->
+<div class="time">
+   <p>英雄，您已作战<span>0</span>秒</p>
+ </div>
+<div class="bu">
+   <p>英雄，您已经走了<span>0</span>步</p>
+ </div>
+<input type="button" id="button" value="开始新游戏">
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+  var tt=null;
+ 	// 游戏完成时间和步数
+ var times=0;
+ var time=0;
+ // 打乱之前的图片数组准备加油
+ var src= Array();
+   	src.push("images/201.png");
+   	src.push("images/202.png");
+    src.push("images/203.png");
+    src.push("images/204.png");
+    src.push("images/205.png");
+    src.push("images/206.png");
+    src.push("images/207.png");
+    src.push("images/208.png");
+    src.push("images/209.png");
+    // 按钮事件加油。。。开始游戏
+ 
+    $('#button').click(function(){
+      clearInterval(tt)
+  // 时间归0
+       time=0;
+       times=0;
+       // 来来来设置时间；了
+       tt=setInterval(shij,1000)
+       function shij(){
+        time++;
+        $(".time>p>span").text(time)
+       }
+       	// 乱序排列
+        var srcUsing= new Array();
+	         for(var p=0; p<src.length;p++){
+	         	srcUsing[p]=src[p];
+	         }
+          var newArry= new Array();
+          for(var i=0;i< $("#box img").length;i++){
+             newArry.push(srcUsing.splice(Math.floor(Math.random()*srcUsing.length), 1));
+           }    
+          for(var j=0;j<newArry.length;j++){
+            $("#box img").eq(j).attr("src",String(newArry[j]));
+          }     
+
+       // 设置一个空白图片，
+       var Arrps=document.getElementById("box").getElementsByTagName("img");
+       for(var i=0;i<Arrps.length;i++){
+          Arrps[i].onclick=function(){
+          if (this.getAttribute("src")=="images/201.png");
+          changeP(this,Arrps);
+         };
+       }
+       })
+   
+     
+     // 判断位置
+    function changeP(ob,Arrps){
+           var Ni=0;
+           var Nj=0;
+
+          for(var i=0;i<Arrps.length;i++){
+           if(Arrps[i]==ob)
+           {
+           	// alert(ob)
+            Ni=i;
+           }
+            
+          if(Arrps[i].getAttribute("src")=="images/201.png")
+          {
+          	Nj=i;
+          }
+            
+           }
+            // 绝对值
+           if(Math.abs(Ni-Nj)==3)
+           {
+              var temperOb=ob.getAttribute("src"); 
+              ob.setAttribute("src","images/201.png");
+              Arrps[Nj].setAttribute("src",temperOb);
+              times++;
+              ifright();
+               
+             }else if((Ni-Nj)==1&&(Ni%3)!=0){
+             var temperOb=ob.getAttribute("src"); 
+              ob.setAttribute("src","images/201.png");
+              Arrps[Nj].setAttribute("src",temperOb);
+              times++;
+              ifright();
+               
+             }else if((Ni-Nj)==-1&&(Ni%3)!=2){
+              var temperOb=ob.getAttribute("src"); 
+              ob.setAttribute("src","images/201.png");
+              Arrps[Nj].setAttribute("src",temperOb);
+              times++;
+              ifright();
+             } 
+              $(".bu>p>span").text(times) 
+          }
+           
+          function ifright(){
+            var ps=document.getElementById("box");
+            var Arrps=ps.getElementsByTagName("img");
+             for(var i=0;i<src.length;i++){
+              if(src[i]!=Arrps[i].getAttribute("src")) return;
+             }
+             alert("恭喜，你成功了。。"+"\n"+"用了"+times+"步")
+          }
+ })
+ 
+</script>
+</body>
+</html>

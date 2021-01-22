@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>超炫酷实用的动画插件anime.js实例分享DEMO4</title>
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/zzsc-demo.css">
+<style type="text/css">
+	* {
+	  box-sizing: border-box;
+	}
+
+	html,
+	body {
+		background: #18212D;
+	}
+
+	body {
+	  position: absolute;
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	  height: 100%;
+	  padding: 1rem;
+	  color: white;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	section {
+	  display: flex;
+	  flex-direction: column;
+		position: relative;
+	  width: 100%;
+		max-width: 18rem;
+	  margin: auto;
+	  text-align: center;
+	}
+
+	h1 {
+	  margin-bottom: 1rem;
+	  font-size: 1.5rem;
+	}
+	article {
+	  display: flex;
+	  flex-direction: column;
+		position: relative;
+	  width: 100%;
+	  min-height: 8rem;
+	  margin-bottom: 1rem;
+	  padding: 1rem;
+	}
+
+	.red {
+	  background-color: #FF324A;
+	}
+
+	.green {
+	  background-color: #31FFA6;
+	}
+
+	.blue {
+	  background-color: #206EFF;
+	}
+
+	.yellow {
+	  background-color: #FFFF99;
+	}
+	fieldset {
+	  margin-bottom: 1rem;
+	  border: none;
+	}
+
+	.progress {
+	  width: 82%;
+	  margin-bottom: 1rem;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	div.blue,div.green,div.red,div.yellow {
+	  width: 2rem;
+	  height: 2rem;
+	  margin-top: auto;
+	  margin-bottom: auto;
+	  mix-blend-mode: lighten;
+	}
+</style>
+
+</head>
+<body>
+<div class="zzsc-container">
+	<header class="zzsc-header">
+		<div class="zzsc-demo center">
+		  <a href="index.html">基本动画</a>
+		  <a href="index2.html">多个timing值</a>
+		  <a href="index3.html">指定目标值</a>
+		  <a href="index4.html" class="current">动画控制</a>
+		  <a href="index5.html">动画路径</a>
+		</div>
+	</header>
+	
+	<section>
+	  <article>
+		<div class="div blue"></div>
+		<div class="div green"></div>
+		<div class="div red"></div>
+	  </article>
+		<input class="progress" type="range" value="0" min="0" max="100"></input>
+	  <fieldset>
+		<button class="play">Play</button>
+		<button class="pause">Pause</button>
+		<button class="restart">Restart</button>
+	  </fieldset>
+	</section>
+</div>
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+<script src="js/stopExecutionOnTimeout.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/anime.min.js"></script>
+<script type="text/javascript">
+	var playButton = document.querySelector('.play');
+	var pauseButton = document.querySelector('.pause');
+	var restartButton = document.querySelector('.restart');
+	var progress = document.querySelector('.progress');
+	var myAnimation = anime({
+		targets: '.div',
+		translateX: function () {
+			return anime.random(10, 14) + 'rem';
+		},
+		scale: function () {
+			return anime.random(10, 20) / 10;
+		},
+		rotate: function () {
+			return anime.random(-360, 360);
+		},
+		duration: function () {
+			return anime.random(800, 1400);
+		},
+		loop: true,
+		easing: 'easeOutQuad',
+		update: function (animation) {
+			progress.value = animation.progress;
+		}
+	});
+	playButton.addEventListener('click', function () {
+		myAnimation.play();
+	});
+	pauseButton.addEventListener('click', function () {
+		myAnimation.pause();
+	});
+	restartButton.addEventListener('click', function () {
+		myAnimation.restart();
+	});
+	progress.addEventListener('input', function () {
+		myAnimation.seek(progress.value);
+	});
+</script>
+</body>
+</html>
